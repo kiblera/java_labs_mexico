@@ -12,8 +12,12 @@ import java.util.Scanner;
  */
 
 public class Exercise_03 {
+    public static void main(String[] args) throws java.io.IOException {
 
-    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number in feet: ");
 
+        double feet = input.nextDouble();
+        System.out.println("Length in meters: "+ (.305*(feet)));
     }
-}
+    }

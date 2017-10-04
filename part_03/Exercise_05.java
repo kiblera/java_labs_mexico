@@ -9,7 +9,11 @@ public class Exercise_05 {
     public static void main(String[] strings) {
 
         // read an integer from the user >=1 and <= 999,999,999
+        int i;
 
+       // i = (int)
+
+        // System.in.read(i = 1, i <= 999999999, i);
 
         // use the && operator to see if the user's number is divisible by both 4 and 7
 

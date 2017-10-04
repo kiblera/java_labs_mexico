@@ -9,14 +9,19 @@ package part_03;
 
 public class Exercise_04 {
 
-//    public static void main(String[] strings) {
-//
+    public static void main(String[] strings) {
+
+
 //        // generate a random number >= 0 and <= 3
-//        // use this as the computer's hand
+        int i = 0 + (int) (Math.random() * ((3 - 1) + 1));
+//
+// use this as the computer's hand
 //
 //
-//        Scanner input = new Scanner(System.in);
-//        System.out.print("Enter 0 for scissor, 1 for rock, 2 for paper: ");
+  //      Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter 0 for scissor, 1 for rock, 2 for paper: ");
+
 //        int playerHand = input.nextInt();
 //
 //        // call getHand(int hand) to determine the computers hand
@@ -51,5 +56,5 @@ public class Exercise_04 {
 //        }
 //
 //        // return status
-//    }
+   }
 }

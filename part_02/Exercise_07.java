@@ -9,7 +9,7 @@ import java.util.Scanner;
  *      How many years and days does that number in minutes represent?
  *
  *      For this exercise each year has 365 days.
- *
+ *  Use do while
  */
 public class Exercise_07 {
 
