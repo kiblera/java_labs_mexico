@@ -11,3 +11,24 @@ package part_04;
  40 41 42 43 44 45 46 47 48 49
 
  */
+
+class TwoD {
+    public static void main(String args[]) {
+        int t, i;
+        int table[][] = new int[5][10];
+
+        for(t=0; t < 5; t++) {
+
+            for(i=0; i < 10; i++) {
+                table[t][i] = (t*10) + i;
+            }
+        }
+
+        for(t=0; t < 5; t++) {
+            for(i=0; i < 10; i++) {
+                System.out.print(table[t][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}

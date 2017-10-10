@@ -73,8 +73,6 @@ class Exercise_03 {
                 break;
        }
 
-
-
         return monthName;
     }
 }

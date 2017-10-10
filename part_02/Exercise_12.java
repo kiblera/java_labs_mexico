@@ -15,4 +15,23 @@ import java.util.Scanner;
  *
  *
  */
+public class Exercise_12 {
+    public static void main(String args[]) {
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter miles to drive: ");
+        double miles = input.nextDouble();
+
+        System.out.print("Enter MPG of the car: ");
+        double mpg = input.nextDouble();
+
+        System.out.print("Enter price per gallon of fuel: ");
+        double price = input.nextDouble();
+
+        input.close();
+
+        double tripCost = (miles / mpg * price);
+
+        System.out.print("Cost of the trip is $" + tripCost);}
+    }

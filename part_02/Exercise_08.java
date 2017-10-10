@@ -15,14 +15,18 @@ public class Exercise_08 {
         int i;
 
         Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number in between 0 and 1,000,000,000: ");
 
-        System.out.print("Enter a number between 0 and 1,000,000,000: ");
-        System.out.print("Enter a number between 0 and 1,000,000,000: ");
-        
+        int userNumber = input.nextInt();
+
+        // find the number while using a while loop
         i = 0;
-        while (i <=1,000,000,000); i++; {
-            System.out.print(i);
+        while (i <= 1000000000) {
+            if (userNumber == i){
+                break;
+            }
             i++;
         }
+        System.out.print(i);
     }
 }
