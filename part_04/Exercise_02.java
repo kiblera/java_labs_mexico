@@ -21,9 +21,10 @@ class Exercise_02 {
             a[i] = i;
             // odd values generated to the console
         }
-        for (i = 2016; i > 0; i -= 2) {
-            System.out.println(a[i]-1);
-
+        for (i = 2015; i > 0; i--) {
+             if(a[i] % 2 == 0) {
+                 System.out.println(a[i] - 1);
+             }
         }
     }
 }

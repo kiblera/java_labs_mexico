@@ -10,18 +10,13 @@ package part_04;
  */
 
 class EnhancedLoop  {
-    public static void main (String args[])  {
-        int nums [] = { 2, 7, 4, 3, 6, 5};
-        int val = 5;
-        boolean found = false;
-
-        for(int x : nums)  {
-            if (x == val) {
-                found = true;
-                break;
-            }
+    public static void main (String args[]) {
+        int[] array = new int[10];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
         }
-        if (found);
-        System.out.println("Value found!");
+        for (int x : array) {
+            System.out.println((array[x - 1]));
+        }
     }
 }
