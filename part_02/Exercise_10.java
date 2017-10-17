@@ -16,13 +16,14 @@ public class Exercise_10 {
         for (count = 2; count <= 100; count++) {
             isPrime = true;
 
-            for (d = 2; d <= count - 1; d++) {
+            for (d = 2; d <= (count / 2); d++) {
                 if (count % d == 0) {
                     isPrime = false;
+                    break;
                 }
             }
             if (isPrime)
-            System.out.println(count + " is prime");
+                System.out.println(count + " is prime");
         }
     }
 }

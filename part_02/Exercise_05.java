@@ -20,7 +20,7 @@ public class Exercise_05 {
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
 
-        if (number < 10 && number > 0)  {
+        if (number < 10 && number > 0) {
             if (number < 9) {
                 if (number < 8) {
                     if (number < 7) {
@@ -58,5 +58,4 @@ public class Exercise_05 {
             System.out.println("OTHER");
         }
     }
-
 }

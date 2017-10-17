@@ -15,9 +15,6 @@ public class Exercise_10 {
        double mile = 1.6;
        double minute = 30.5;
 
-        System.out.println("The runner's average speed is " + (km * mile) / ((minute) / (60)) + " mph.");
-
-
+       System.out.println("The runner's average speed is " + (km * mile) / ((minute) / (60)) + " mph.");
     }
-
 }

@@ -13,27 +13,27 @@ import java.util.Scanner;
  */
 public class Exercise_07 {
 
-    public static void main(String args[]) {
+    public static void main(String args[])
+        throws java.io.IOException {
         double i;
 
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter a number in minutes, up to 1,000,000,000.");
 
-        double minutesInYear = input.nextInt();
+        double minutes = input.nextInt();
 
-        double years = (minutesInYear / 60 / 24 / 365);
-        double days = (minutesInYear / 60 / 24);
+        double years = (minutes / 60 / 24 / 365);
+        double days = (minutes / 60 / 24);
 
-        // find the number of minutes while using a while loop
-        i = 0;
-        while (i <= 1000000000) {
-            if (minutesInYear == i){
-                break;
-            }
-            i++;
-        }
-        System.out.println("The number of minutes you entered equals " + days + " days" + " or " + years + " years");
+        // find the number of minutes
+        double remainingMinutes = minutes % days;
+
+
+        System.out.println("The number of minutes you entered equals " + days
+                + " days" + " or " + years + " years");
+
+
+
     }
 }
-

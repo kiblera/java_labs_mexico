@@ -7,3 +7,26 @@ package part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
+
+import java.util.Scanner;
+
+public class Exercise_05 {
+
+    public static void main(String[] args) {
+        Scanner stdIn = new Scanner(System.in);
+
+        System.out.print("Enter an integer. ");
+        int input = stdIn.nextInt();
+
+        stdIn.close();
+        recursive(input);
+    }
+
+    public static void recursive (int i) {
+        if (i == 0)  {
+            return;
+        }
+        recursive(i-1);
+        System.out.println("Hello Recursion!");
+    }
+ }

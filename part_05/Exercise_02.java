@@ -8,3 +8,77 @@ package part_05;
  * flow of execution and the varying state of each private variable. You can name these classes whatever you want.
  *
  */
+
+class One {
+    public static void main(String[] args) {
+    One newObjectOne = new One();
+
+    Two newObjectTwo = new Two();
+
+        newObjectTwo.setX(10);
+        newObjectTwo.setY(20);
+        newObjectTwo.setZ(50);
+
+        System.out.println(newObjectTwo.toString());
+
+        int x = newObjectTwo.getX();
+        int y = newObjectTwo.getY();
+        int z = newObjectTwo.getZ();
+
+        newObjectOne.method_01(newObjectTwo);
+
+        System.out.println(newObjectTwo.toString());}
+
+    public void method_01(Two obj) {
+
+        obj.setX(100);
+        obj.setY(200);
+        obj.setZ(500);
+
+        method_2(obj);}
+
+    public void method_2(Two obj) {
+        obj.setX(1000);
+        obj.setY(2000);
+        obj.setZ(5000);
+    }
+}
+
+class Two {
+
+    private int x;
+    private int y;
+    private int z;
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public String toString() {
+        return "SecondClass{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                '}';
+    }
+}

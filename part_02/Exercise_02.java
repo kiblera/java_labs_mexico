@@ -23,8 +23,8 @@ public class Exercise_02 {
         double radius = input.nextDouble();
         System.out.print("Enter length: ");
         double length = input.nextDouble();
-        //Compute the volume and area of a cylinder.
 
+        //Compute the volume and area of a cylinder.
         area = radius * radius * 3.1415;
         volume = radius * radius * 3.1415 * length;
 

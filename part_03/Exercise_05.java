@@ -34,6 +34,6 @@ public class Exercise_05 {
                 // use the || operator to see if the user's number is divisible by 4 or 7
                 //  if ((userNumber%a == 0) || (userNumber%b == 0))
                 //      System.out.println("Your number is divisible by 4 or 7.");
-            }
         }
     }
+}

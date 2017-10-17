@@ -17,8 +17,6 @@ public class Exercise_03 {
         System.out.println("          J   A A  V   V  A A");
         System.out.println("         JJ  AAAAA  V V  AAAAA");
         System.out.println("      JJJJJ A     A  V  A     A");
-
-        //...
     }
 }
 

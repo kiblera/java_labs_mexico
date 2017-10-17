@@ -8,3 +8,75 @@ package part_05;
  * within each instance of Class_02 to modify Class_02's private instance variables.
  *
  */
+
+class Class_1{
+    public static void main(String[] args) {
+
+        Class_2 x = new Class_2();
+        Class_2 y = new Class_2(9);
+        Class_2 z = new Class_2(2, 3);
+
+
+        y.setA(2);
+        y.setB(5);
+        y.setC(10);
+
+
+        int i =10, j = 6;
+        x.setA(2);
+        x.setB(5);
+        x.setC(10);
+
+        y.setB(i);
+        z.setC(i*j);
+
+        System.out.println(y.getA());
+        System.out.println(y.getB());
+        System.out.println(y.getC());
+    }
+}
+
+class Class_2 {
+    //create 3 or more private variables
+    private int a;
+    private int b;
+    private int c;
+
+    //create at least 3 overloaded constructors
+    Class_2() {
+        System.out.println("Inside Class_2().");
+        a = 0;
+    }
+    Class_2(int a) {
+        System.out.println("Inside Class_2(int).");
+        b = a;
+    }
+    Class_2(int i, int j) {
+        System.out.println("Inside Class_2(int, int).");
+        c = i * j;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public int getC() {
+        return c;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
+}

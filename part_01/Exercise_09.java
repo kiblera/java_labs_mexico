@@ -19,11 +19,5 @@ public class Exercise_09 {
 
         System.out.println("Area equals" + " " + area);
         System.out.println("Perimeter equals " + perimeter);
-
-
-
-
-
-
     }
 }

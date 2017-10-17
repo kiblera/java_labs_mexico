@@ -33,5 +33,6 @@ public class Exercise_12 {
 
         double tripCost = (miles / mpg * price);
 
-        System.out.print("Cost of the trip is $" + tripCost);}
+        System.out.print("Cost of the trip is $" + tripCost);
     }
+}

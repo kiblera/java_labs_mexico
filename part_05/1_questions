@@ -2,61 +2,119 @@
 Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
+Public, private and protected
 
 2) Briefly explain each acm and how they differentiate from each other?
+Public is the default specifier and can be accessed by any other code in the program. The protected modifier applies
+only when inheritance is involved. Private modifiers only allow access to other members of its class.
 
 3) Why do we use acm's?
+Restricting access to a class' members is a fundamental part of object-oriented programming as it helps prevent the
+misuse of an object.
 
 4) What is the risk of not using acm's?
+It would be possible that improper values could be assigned to that data. The data could be open to tampering.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
+// method-name(argument-types)return-type
+Boolean sameClass (Car ob)
+    if ((ob.a == a) & (ob.b == b) & (ob.c == c)) return true;
+    else return false;
 
 6) Write a method signature that returns an object of type "Car".
+    ObjectReturnDemo equalTo(Car)
+    {
+        ObjectReturnDemo equalTo =
+               new ObjectReturnDemo(a);
+        return Car;
+    }
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
-method to another?
+method to another? Objects are implicitly passed by reference. Objects are passed to methods by use of
+call-by-reference. Changes to the object inside the method affect the object used as an argument.
 
-8) What is method overloading?
+8) What is method overloading? When two or more methods within the same class share the same name, as long as their
+parameter declarations are different.
 
-9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
+9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.) It is one of the ways
+that Java implements polymorphism.
 
-10) How do you overload a method? What signifies that a method is being overloaded?
+10) How do you overload a method? What signifies that a method is being overloaded? To overload a method, simply declare
+different versions of it. When the type and/or number of the parameters of each overloaded method differ.
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
+int ovlDemo(int a, int b)
 
-12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+12) How do you overload a constructor? What signifies that a constructor is being overloaded? The proper constructor is
+called based upon the parameters specified when new is executed. A new object is constructed in a variety of ways but
+always by overloading a class' constructor.
 
-13) Why do we overload constructors?
+13) Why do we overload constructors? Using one object to initialize another is efficient.
 
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+public class Test
+{
+String name;
+int age;
 
-15) What is recursion?
+public Test(int a,String b, char c)
+{
+c=c;
+name=b;
+age=a;
+}
+}
+
+15) What is recursion? It's the process of defining something in terms of itself and the key component is that it is a
+recursive method that executes a call to itself.
 
 16) What important considerations must you keep in mind when using recursion?
+A recursive call only makes new arguments, not a new copy of the method.
+Too many recursive calls to a method could cause a stack overrun.
+You must have a conditional statement like if somewhere to force the method to return without the recursive call
+being executed. If not, once you call the method, it will never return.
+Use println statements liberally so you can watch what's going on and abort execution if you see that you made an error.
 
 17) How do you make a method recursive?
+The computation of the factorial of a number. The factorial of a number N is the product of all the whole numbers
+between 1 and N. For examples, 3 factorial is 1 x 2 x 3, or 6.
 
-18) How do you escape a recursive method?
+18) How do you escape a recursive method? The Java run time system will cause an exception. Use println() statements so
+you can watch to see if you need to abort execution if you see a mistake.
 
-19) Explain what "static" is all about?
+19) Explain what "static" is all about? If you want to create a class member that can be used by itself without any
+declaration to a specific instance, precede its declaration with the keyword static. When a member is static, it can be
+accessed before any objects of its class are created and without reference to any object. It can be used to declare
+both methods and variables.
 
-20) When should you use "static"?
+20) When should you use "static"? The most common example is main () because it must be called by the JVM when your
+program begins. Outside the class, you need only to specify the name of its class followed by the dot operator and no
+object needs to be created.
 
-21) What differentiates static variables from instance variables?
+21) What differentiates static variables from instance variables? Static variables are global and when an object is
+declared, no copy of the static variable is made. Instead, all instances of the class share the same static variable.
 
-22) What is a the quicksort? Briefly describe how the quicksort works.
+22) What is a the quicksort? Briefly describe how the quicksort works. It is the best general-purpose sorting algorithm
+currently available and an alternative to Bubble sort. It is built on the idea of partitions. The general procedure is
+to select a value called the comparand, and then to partition the array into two sections. All elements greater than or
+equal to the partition value are put on one side, and those less than the value are put on the other. This process is
+repeated for each remaining section until the array is sorted.
 
-23) What is a nested, or inner, class?
+23) What is a nested, or inner, class? It is a class defined within another class.
 
-24) What is the scope of a nested class?
+24) What is the scope of a nested class? The scope of a nested class is bounded by its outer class. A nested class that
+is declared directly within its enclosing class scope is a member of its enclosing class.
 
-25) What is a variable-arity method?
+25) What is a variable-arity method? A feature that simplifies the creation of methods that require a variable number of
+arguments.
 
-26) What makes a variable-arity method unique? When should you use it?
+26) What makes a variable-arity method unique? When should you use it? The parameter list is not fixed, but variable in
+length. So it can take a variable number of arguments. You should use it when you want to take a situation with a
+variable number of arguments but supply defaults if some information is not provided.
 
-27) What is the shorthand name for variable-arity?
+27) What is the shorthand name for variable-arity? varargs
 
 28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
-
-
-
+Because of ambiguity errors, sometimes you will need to forego overloading and simply use two different method names.
+Also, in some cases, ambiguity errors expose a conceptual flaw in your code, which you can remedy by more carefully
+crafting a solution.

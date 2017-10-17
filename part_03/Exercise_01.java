@@ -22,7 +22,6 @@ class Vino {
     public Vino (int alcoholContent){
         this.alcoholContent = alcoholContent;
     }
-
 }
 
 class Beer {
@@ -30,6 +29,7 @@ class Beer {
     int alcoholContent;
     int ibu;
     int calories;
+
     public Beer (int alcoholContent){
         this.alcoholContent = alcoholContent;
 

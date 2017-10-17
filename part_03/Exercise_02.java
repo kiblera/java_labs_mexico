@@ -21,7 +21,6 @@ class RunningController {
         System.out.println("Ryan's shoes are " + ryan.getShoeColor() + " and his mph is " + ryan.getMph() + ".");
         System.out.println("Ryan can run " + ryan.calculateDistance(2) + " miles in 2 hours.");
         System.out.println("Ryan had " + ryan.calculateHeartbeats(120) + " heartbeats during the run.");
-
     }
 }
 
@@ -42,14 +41,12 @@ class Runner {
     // write a method that takes an int "time in hours" as a parameter and returns the total distance run
     public int calculateDistance(int runningTime){
         return runningTime * mph;
-
     }
 
     //write a method that calculates total heartbeats over entire run based on bpm
 public int calculateHeartbeats(int runningTime){
         return runningTime * bpm;
 }
-
 
     public String getShoeColor() {
         return shoeColor;

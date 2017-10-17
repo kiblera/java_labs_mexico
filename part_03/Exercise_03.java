@@ -32,6 +32,7 @@ class Exercise_03 {
 
         // use a switch statement to determine the name of the month
         // for instance if the random int is 1 the name of month is January
+        // return the month name
 
         switch (month) {
 
@@ -72,9 +73,6 @@ class Exercise_03 {
                 monthName = "The name of the month is December";
                 break;
        }
-
         return monthName;
     }
 }
-
-        // return the month name

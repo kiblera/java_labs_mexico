@@ -35,7 +35,9 @@ public class Exercise_11 {
         double futureInvestmentValue = calculateFutureInvestment(
                 investmentAmount, annualInterestRate, years);
 
-        System.out.print("Accumulated value is $" + futureInvestmentValue);}
+        System.out.print("Accumulated value is $" + futureInvestmentValue);
+
+    }
 
     private static double calculateFutureInvestment(double investmentAmount,
                                                     double annualInterestRate, double years) {

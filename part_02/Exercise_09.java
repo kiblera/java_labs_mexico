@@ -1,8 +1,5 @@
 package part_02;
 
-
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 /**
  * Part 2 Exercise 9:
  *
@@ -10,8 +7,8 @@ import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
  *
  */
 public class Exercise_09 {
-    public static void main(String args[])
-            throws java.io.IOException {
+
+    public static void main(String args[]) {
 
         char ch;
         ch = 'Z';

@@ -21,7 +21,6 @@ public class ComputePI {
         for(int x=1; x < loops; x+=2) {
             pi = pi + (y/x);
             y = -y;    // alternate the sign each time
-
         }
 
         System.out.println("π = " + 4*pi + " after " + loops/2 + " loops"); //PI=3.141592642478473 after 90000000

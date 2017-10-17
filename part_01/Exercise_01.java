@@ -13,13 +13,9 @@ import sun.jvm.hotspot.HelloWorld;
 
 public class Exercise_01 {
 
-    public static void main (String args[]) {
-
-        //System.out.println(...)
-
+    public static void main (String[] arg)  {
         System.out.println("Hello World!");
-        System.out.println("I'm a programmer now.");
-        System.out.println("Yeehaw!");
+        System.out.println("I'm a programmer now. \nYeehaw!");
 
     }
 }

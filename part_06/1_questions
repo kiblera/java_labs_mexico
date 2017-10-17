@@ -1,23 +1,48 @@
-
 1) What is Java inheritance?
+It allows the creation of hierarchical classifications. It creates a general class that defines traits common to a set
+of related items.
 
 2) How does inheritance work?
+A class that is inherited is a superclass which contains common traits to a set of related items. The superclass
+inherits a subclass which inherits all the variables and methods defined by the superclass and adds unique elements.
 
 3) What are some advantages that inheritance provides?
+-Once you have created a superclass that defines the attributes common to a set of objects, it can be used to create any
+number of more specific subclasses. Each subclass can precisely tailor its own classification.
+-Inheriting a class does not overrule the private access restriction.
 
 4) What does the "super" keyword do?
+-"super" allows a subclass to call a constructor defined by its superclass by using super(parameter-list);
+-"super" also acts somewhat like "this" in the form super.member where it always refers to the superclass of the
+subclass in which it is used.
 
 5) In what order are constructors called when there are multiple subclasses?
+In a class hierarchy, constructors complete their execution in order of derivation, from superclass to subclass. If
+there is no superclass, then it goes from B subclass to C subclass, etc.
 
 6) What does it mean when a method is overridden?
+In a class hierarchy, when a method in a subclass has the same return type and signature as a method in its superclass.
+The method in the subclass then overrides the method in the superclass. It refers to the version of that method
+defined by the subclass.
 
 7) How do overridden methods support polymorphism?
+They are another way that Java implements the "one interface, multiple methods" aspect of polymorphism. Superclasses and
+subclasses form a hierarchy that moves from lesser to greater specialization. The superclass provides all elements that
+the subclasses can use directly. It also defines those methods that the derived class must implement on its own. So the
+subclass has flexibility to define its own methods yet still have a consistent interface. Combining with inheritance,
+a superclass can define the general form of the methods to be used by all subclasses.
 
 8) What is the difference between an overloaded method and an overridden method?
+An overloaded method allows two or more methods within the same class to share the same name, as long as their parameter
+declarations are different. An overridden method occurs when a method in a subclass has the same return type and
+signature as a method in its superclass and will refer to the version of that method defined by the subclass.
 
 9) What is dynamic method dispatch?
+It is the mechanism by which a call to an overridden method is resolved at run time rather than at compile time. This is
+how Java implements run-time polymorphism.
 
 10) What does the "final" keyword do?
+It does not allow a method to be overridden or a class from being inherited.
 
 11) Are classes in Java are a subclass of what super class?
-
+Object
