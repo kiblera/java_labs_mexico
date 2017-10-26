@@ -182,7 +182,7 @@ class Regional extends Domestic {
         String name = getName();
         int cap = getCapacity();
         int gatetest = gates;
-        return "tesdt";
+        return "test";
     }
 
 

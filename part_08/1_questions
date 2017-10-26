@@ -1,29 +1,81 @@
 
 1) Describe the exception hierarchy.
-This is not a test
+All exceptions are represented by classes and all exception classes are derived from a class called Throwable. So when
+an exception occurs in a program, an object of some type of exception class is generated. The two direct subclasses are
+Exception and Error. Errors that result from program activity are represented by subclasses of Exception. An important
+subclass of Exception is RuntimeException, which represents various common run-time errors. Exceptions of type Error are
+related to errors that occur in the JVM itself and not in your program.
+
 2) What is a try/catch statement?
+The keywords work together. When an exception is thrown, it can be caught by its corresponding catch statement, which
+then processes the exception.
 
 3) Why do we use try/catch statements?
+If no exception is thrown, then a try block ends normally, and all of its catch statements are bypassed. Execution
+resumes with the first statement following the last catch. Thus, catch statements are executed only if an exception is
+thrown.
 
-4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
+4) Write a full example of a try/catch/finally statement that catches two distinct exceptions.
+try {
+}
+catch (ExcepType1 exOb) {
+}
+catch (ExcepType 2 exOb) {
+}
+finally {
+}
 
 5) What does it mean to "throw" an exception? How does it work?
+Throw is a keyword which indicates that if something unexpected happens then "Throw" or mark it as particular kind of
+exception. It is used to declare the exceptions that are not handled by a particular method and is an instruction to
+the callers to either handle these explicitly or rethrow them up in the call hierarchy.
 
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+In general, it will be caught by the JVM. The JVM's default exception handler terminates execution and displays a stack
+trace and error message.
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
+You should catch the subclass exception first. If you don't, then the superclass catch will also catch all derived
+classes and causing unreachable code to be created so the subclass can never execute.
 
 8) Write a nested try/catch statement.
+try {
+    for(int i = 0; i < numer.length; i++} {
+        try {
+            sout(some exception);
+            }
+            catch (Exception exc) {
+            sout (else error);
+        }
+    }
+}
 
 9) What does it mean to rethrow an exception?
+An exception caught be one catch statement can be rethrown so that it can be caught by an outer catch. It will not be
+recaught by the same catch statement and will propagate to the next catch statement instead.
 
 10) What are the 7 methods that come with the Throwable class?
+    -Throwable filllnStackTrace()
+    -String getLocalizedMessage()
+    -String getMessage()
+    -void printStackTrace()
+    -void printStackTrace(PrintStream stream)
+    -void printStackTrace(PrintWriter stream)
+    -String toString()
 
 11) What does the "finally" block do?
+It specifies a block of code to execute when a try/catch block is exited.
 
 12) When is the finally block executed? Will it ever not be executed?
+The finally block will be executed whenever execution leaves a try/catch block, no matter what conditions cause it. It
+is also executed if any code within the try block or any of its catch statements return from the method. No matter how
+the try block is exited, the finally block is executed.
 
 13) What are the three recently added features to Java exceptions?
-
-
+    -The first supports automatic resource management, which automates the process of releasing a resource when no
+    longer needed.
+    -The second is called multi-catch and allows two or more exceptions to be caught by the same catch clause.
+    -The third is called final rethrow or more precise rethrow and restricts the type of exceptions that can be
+    rethrown to only those checked exceptions that the associated try block throws, that are not handled by a
+    preceding catch clause, and that are a subtype or supertype of the parameter.

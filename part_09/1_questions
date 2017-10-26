@@ -1,0 +1,68 @@
+
+1) What is the difference between a byte stream and a character stream?
+A byte stream is a convenient means for handling input and output of bytes like when reading or writing binary data.
+A character stream handles and input and output of characters. They use UNicode and can be internationalized.
+
+2) List at least 3 examples of byte stream classes?
+InputStream, OutputStream, PrintStream
+
+3) List at least 3 examples of character stream classes?
+Reader, Writer, BufferedReader
+
+4) What is try-with-resources? Why is it super cool?
+When the try block ends, the resource is automatically released. When using this, the second exception is suppressed but
+not lost.
+
+5) Demonstrate a try-wth-resources block:
+try (FileInputStream In = new FileInputStream(args[0])) {
+
+    do  {
+        i = fin.read();
+        if(i != -1) System.out.print((char) i);
+    } while(i != -1);
+
+  }   catch(IOException exc)  {
+    System.out.println("I/O Error: " + exc);
+    }
+  }
+}
+
+6) What does the read() method on the FileInputStream class return?
+It displays the contents of a text file as a command-line argument.
+
+7) What is the documentation above of the FileInputStream class header say? (hint: inside /** ... */)
+java ShowFile TEST.TXT
+
+8) Is a DataOutputStream used for bytes or characters?
+Bytes
+
+9) What is a BufferedReader?
+A buffered input character stream; it is the best class for reading console input.
+
+10) Why does a BufferedReader require an InputStreamReader as an argument?
+The InputStreamReader converts bytes to characters.
+
+11) What does the InputStreamReader do with it's byte stream argument?
+The object produced by InputStreamReader is used to construct a BufferedReader instance.
+
+12) What is the difference between the read() and readLine() on BufferedReader?
+read() is a method to read characters from System.in in a similar was as they were read using byte streams.
+readLine() is a method that reads strings from the keyboard and returns a String object.
+
+13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
+import java.io*;
+
+class Yucatan {
+    public static void main(String[] args) {
+        String s;
+
+        try(BufferedReader br = new BufferedReader br = new BufferedReader(new FileReader("yucatan_cenotes.txt")))
+        {
+            while ((s - br.readline())  != null) {
+                System.out.println(s);
+            }
+        } catch (IOException exc)  {
+          System.out.println("I/O Error: " + exc);
+        }
+    }
+}
