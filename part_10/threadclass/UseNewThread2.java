@@ -1,4 +1,4 @@
-package part_10;
+package part_10.threadclass;
 
 public class UseNewThread2 {
 

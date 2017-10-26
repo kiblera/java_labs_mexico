@@ -1,20 +1,35 @@
 
 1) What is the difference between the Thread and Runnable?
+The Thread class encapsulates an object that is runnable. The Runnable interface abstracts a unit of executeable code.
+Both approaches use the Thread class to instantiate, access and control the thread. The only difference is how a
+thread-enabled class is created.
 
 2) How do you start a thread using Runnable?
+class MyThread implements Runnable {
 
 3) How do you start a thread using Thread?
+class MyThread extends Thread {
 
 4) How do you get a thread's name?
+You can call getName() defined by Thread.
+ie - final String getName()
 
 5) What does the "synchronize()" method do?
+It coordinates the activities of multiples threads, most commonly when they need access to a shared resource that can
+only be used one thread at a time.
 
-6) What doe sthe "join()" method do?
+6) What does the "join()" method do?
+It waits until the thread on which it is called terminates.
 
 7) What does the "sleep()" method do?
+It causes the method from which it was called to suspend execution for a specified period of time.
 
 8) What is the one method you must write if you're implementing the Runnable class?
+Construct a Thread object because MyThread implements Runnable.
 
 9) Should you create that same method if you're extending Thread?
+No, you would use a different constructor: Thread(Runnable threadOb, String name)
 
 10) Why is multi-threading so cool?
+It lets you utilize the idle time that is present in most programs. Your program can execute two or more threads
+simultaneously. It's a specialized form of multi-tasking so you can write very efficient programs.

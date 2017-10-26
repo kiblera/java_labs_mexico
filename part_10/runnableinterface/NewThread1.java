@@ -1,4 +1,4 @@
-package part_10;
+package part_10.runnableinterface;
 
 
 // Create a thread by implementing Runnable.
@@ -14,7 +14,7 @@ public class NewThread1 implements Runnable {
     public void run() {
         System.out.println(thrdName + " starting.");
         try {
-            for(int count=0; count < 10; count++) {
+            for(int count=0; count < 50; count++) {
                 System.out.println("In " + thrdName +
                         ", count is " + count);
             }

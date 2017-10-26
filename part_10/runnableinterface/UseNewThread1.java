@@ -1,4 +1,4 @@
-package part_10;
+package part_10.runnableinterface;
 
 public class UseNewThread1 {
     public static void main(String args[]) {
